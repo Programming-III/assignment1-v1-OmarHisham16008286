@@ -1,13 +1,28 @@
-#ifndef MAMMAL_H
-#define MAMMAL_H
-
+#ifndef Mammal_h
+#define Mammal_h
 #include "Animal.h"
+#include <iostream>
+using namespace std;
 
-//define mammal class here
+class Mammal : public Animal{
+
+    private: 
+    string furColor;
+
+public: 
+Mammal();
+
+Mammal(string name,int age,bool isHungry,string furColor);
+
+~Mammal();
+
+void display() override;
+void feed() override;
+
+void setFurColor(string furColor);
+string getFurColor();
 
 
 
-
-
-
+}; 
 #endif
